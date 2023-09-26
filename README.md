@@ -11,5 +11,6 @@ terraform init
 AWS_PROFILE=project AWS_REGION=us-east-1 terraform apply -var bucket_name=project-tfstate -var table_name=project-tfstate-lock
 ```
 
-These commands will create bucket name which will store Terraform state and
-DynamoDB table that will store state locks to prevent parallel writes.
+These commands will create encrypted private S3 bucket which will store
+Terraform state and DynamoDB table that will store state locks to prevent
+parallel writes.

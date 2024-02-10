@@ -1,4 +1,4 @@
-# terraform-state-s3-backend
+# terraform-module-s3-state-backend
 
 Setup S3 and DynamoDB backend for Terraform state
 
@@ -35,7 +35,7 @@ provider "aws" {
 }
 
 module "tfstate_backend" {
-  source = "github.com/bdeak4/terraform-state-s3-backend"
+  source = "github.com/bdeak4/terraform-module-s3-state-backend"
 
   bucket_name = "project-tfstate"
   table_name  = "project-tfstate-lock"
